@@ -15,3 +15,6 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/users', 'UserController@list_all_users');
+Route::post('/users', 'UserController@add_user');
