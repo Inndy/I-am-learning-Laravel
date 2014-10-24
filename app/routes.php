@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function() {
-    return View::make('index');
-});
+Route::get('/', 'IndexController@index');
 
 Route::get('/hello', function() {
 	return View::make('hello');
