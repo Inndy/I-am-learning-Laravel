@@ -6,6 +6,8 @@
   <link rel="shortcut icon" href="/lab.ico" type="image/x-icon" />
 </head>
 <body>
-  @yield('content')
+  <div class="main">
+    @yield('content')
+  </div>
 </body>
 </html>
