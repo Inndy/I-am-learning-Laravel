@@ -26,6 +26,7 @@
         </tr>
       </table>
     {{ Form::close() }}
+    <p style="font-size: 8pt; color: red;">Warning: We're using plainpass.</p>
   @endif
   <hr />
   <h2>List Users</h2>
