@@ -22,6 +22,13 @@ class UserController extends BaseController {
 
     public function show_user($id) {
         $user = User::find($id);
-        return $user;
+        return View::make('user')->with([
+            'user' => $user,
+            'columns' => [
+                'id' => 'ID',
+                'name' => 'Name',
+                'email' => 'E-Mail'
+            ]
+        ]);
     }
 }
