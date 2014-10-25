@@ -19,4 +19,9 @@ class UserController extends BaseController {
             'added' => $user
         ]);
     }
+
+    public function show_user($id) {
+        $user = User::find($id);
+        return $user;
+    }
 }

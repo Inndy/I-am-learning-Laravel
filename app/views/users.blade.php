@@ -32,7 +32,7 @@
   <h2>List Users</h2>
   <ul>
   @foreach($users as $user)
-    <li>{{ $user->name }}</li>
+    <li>{{ HTML::LinkAction('UserController@show_user', $user->name, $user->id) }}</li>
   @endforeach
   </ul>
 @stop
