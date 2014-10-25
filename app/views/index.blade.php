@@ -8,7 +8,7 @@
   <hr />
   <ul>
     @foreach($links as $link)
-      <li><a href="{{ $link->link }}">{{ $link->name }}</a></li>
+      <li>{{ $link->fire() }}</li>
     @endforeach
   </ul>
 @stop
