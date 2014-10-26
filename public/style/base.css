@@ -1,17 +1,12 @@
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 html { background-color: #888; }
 body {
-    margin: 9px 12px;
-    padding: 6px 9px;
-    background-color: #FFF;
-    border-radius: 3px;
-    box-shadow: 6px 6px 9px #333;
     background: url('/image/bg_paper_01.jpg');
-
     color: #222;
 }
 
