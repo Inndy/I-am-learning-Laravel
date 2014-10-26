@@ -16,6 +16,10 @@
       </tr>
       @endforeach
     </table>
+    {{ Form::open([ 'action' => [ 'UserController@del_user', $user->id ], 'method' => 'delete' ]) }}
+      {{ Form::hidden('id', $user->id) }}
+      {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+    {{ Form::close() }}
   @else
   @endif
 @stop

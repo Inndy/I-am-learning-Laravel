@@ -20,3 +20,4 @@ Route::get('/hello', function() {
 Route::get('/users', 'UserController@list_all_users');
 Route::post('/users', 'UserController@add_user');
 Route::get('/users/{id}', 'UserController@show_user');
+Route::delete('/users/{id}', 'UserController@del_user');

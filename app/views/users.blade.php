@@ -4,6 +4,11 @@
   <h1>Hi!</h1>
   <hr />
   <h2>Registration</h2>
+  @if(isset($msg))
+    <div class="msg {{ $msg_type or '' }}">{{ $msg }}</div>
+    <hr />
+  @endif
+
   @if(isset($added))
     <p>Hi, {{ $added->name }}, You have been registered successfully.</p>
   @else

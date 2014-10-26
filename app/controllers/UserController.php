@@ -31,4 +31,24 @@ class UserController extends BaseController {
             ]
         ]);
     }
+
+    public function del_user($id) {
+        $user = User::find($id);
+        if ($user) {
+            $user->delete();
+            $msg = 'Delete successfully.';
+            $msg_type = 'success';
+        } else {
+            $msg = 'User not found.';
+            $msg_type = 'error';
+        }
+
+        $users = User::all();
+
+        return View::make('users')->with([
+          'users' => $users,
+          'msg' => $msg,
+          'msg_type' => $msg_type
+        ]);
+    }
 }
