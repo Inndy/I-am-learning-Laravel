@@ -8,7 +8,7 @@
     <p>Hi, {{ $added->name }}, You have been registered successfully.</p>
   @else
     {{ Form::open() }}
-      <table>
+      <table class="table">
         <tr>
           <td>{{ Form::label('name', 'Username') }}</td>
           <td>{{ Form::text('name') }}</td>
@@ -22,7 +22,7 @@
           <td>{{ Form::password('password') }}</td>
         </tr>
         <tr>
-          <td colspan="2">{{ Form::submit('Sign Up!') }}</td>
+          <td colspan="2">{{ Form::submit('Sign Up!', [ 'class' => 'btn btn-primary' ]) }}</td>
         </tr>
       </table>
     {{ Form::close() }}

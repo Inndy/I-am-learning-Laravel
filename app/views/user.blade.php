@@ -4,7 +4,7 @@
   @if(isset($user))
     <h1>User Detail</h1>
     <hr />
-    <table>
+    <table class="table">
       <tr>
         <th>Item</th>
         <th>Value</th>
