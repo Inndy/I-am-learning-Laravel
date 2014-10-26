@@ -18,6 +18,3 @@ body {
 .main {
     padding: 24px 16px;
 }
-
-table { border-collapse: collapse; }
-th, td { border: 1px solid #444; padding: 3px 5px; }
