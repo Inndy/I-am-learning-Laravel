@@ -13,3 +13,7 @@ body {
 .main {
     padding: 24px 16px;
 }
+
+table.table {
+    background-color: rgba(255, 255, 255, 0.4);
+}
