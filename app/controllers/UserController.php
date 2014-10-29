@@ -51,4 +51,27 @@ class UserController extends BaseController {
           'msg_type' => $msg_type
         ]);
     }
+
+    public function auth_user() {
+        $username = Request::get('username');
+        $password = Request::get('password');
+
+        $user = User::where('name', '=', $username)
+                      ->first();
+        if ($user && $user->password === $password) {
+            $msg = '登入成功';
+            $msg_type = 'bg-success';
+        } else {
+            $msg = '登入失敗';
+            $msg_type = 'bg-warning';
+        }
+
+        $users = User::all();
+
+        return View::make('users')->with([
+            'msg' => $msg,
+            'msg_type' => $msg_type,
+            'users' => $users
+        ]);
+    }
 }
